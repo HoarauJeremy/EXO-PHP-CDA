@@ -22,17 +22,16 @@
         <header>
             <!-- place navbar here -->
         </header>
-        <main class="container">
+        <main class="container w-25">
 
-            <div class="border rounded p-5">
+            <div class="my-2 border rounded p-5">
                 
                 <form action="" method="post">
                     <input type="password" name="password" id="password">
                     <input type="submit" value="OK">
                 </form>
                 
-            </div>
-         
+            </div>         
             
             <?php
                 $pwd = isset($_POST['password']) ? $_POST['password'] : '';
@@ -42,9 +41,7 @@
                     header('Location: secret.php');
                 } else {
                     echo "
-                       <div class='border --bs-danger-border-subtle'>
-                            <p class='--bs-danger-text-emphasis'>Mot de passe incorrecte</p>
-                        </div>";
+                       <div class='my-2 p-3 text-danger-emphasis bg-danger-subtle border border-danger-subtle rounded-3'>Mot de passe incorrecte</div>";
                 }
                     
             
