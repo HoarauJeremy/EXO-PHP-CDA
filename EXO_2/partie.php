@@ -27,6 +27,11 @@
 
         <main class="container">
 
+            <!-- 
+                Bonus : Avant de lancer le jeu, le joueur rentre son speudo.
+                un tableau de score référence les 5 meilleurs joueurs.
+             -->
+
             <div class="w-25 my-2 border rounded p-5">
             
                 <form action="" method="post">
@@ -38,20 +43,20 @@
 
             <?php
 
-                $score=0;
+                // $score=0;
                 $nombreRandom = isset($_SESSION['nombreRandom']) ? $_SESSION['nombreRandom'] : 0;
                 $nombreSaisie = isset($_POST["nombre"]) ? $_POST["nombre"] : null;
-
+                
                 if ($nombreSaisie != null) {
                     if($nombreRandom > $nombreSaisie) {
-                        $score++;
+                        // $score++;
                         echo "plus grand";
                     } elseif ($nombreRandom < $nombreSaisie) {
-                        $score++;
+                        // $score++;
                         echo "plus petis";
                     } else {
-                        $score++;
-                        echo "Vous avez Gagner avec ". $score ." point";
+                        // $score++;
+                        echo "Vous avez Gagner!";
                     }
                 } else {
                     echo "Veuiller saisir un nombre pour commencer une partie";
